@@ -1,0 +1,32 @@
+{
+  "plugins": [
+    ["styled-components", { "ssr": true }],
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "_components": "./src/components",
+          "_constants": "./src/constants",
+          "_containers": "./services/containers",
+          "_graphql": "./services/graphql",
+          "_pages": "./pages",
+          "_redux": "./services/redux",
+          "_services": "./services",
+          "_store": "./src/store",
+          "_utils": "./utils"
+        }
+      }
+    ]
+  ],
+  "presets": [
+    "@babel/preset-react",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ]
+}
